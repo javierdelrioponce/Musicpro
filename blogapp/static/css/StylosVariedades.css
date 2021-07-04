@@ -1,0 +1,418 @@
+:root{
+    --color1: rgb(17, 13, 5);
+    --color2: rgb(0, 0, 0);
+    --color3: rgb(3, 3, 1);
+    --fondo: #f2f2f2;
+    --titulos: 40px;
+    --subtitulos: 30px;
+    --margenes:60px;
+    --espacios: 10px;
+    --espacios-contenido: 45px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Dancing Script';
+    background: var(--fondo);
+}
+
+
+img{
+    vertical-align: top;
+}
+
+
+/*Preloader*/
+/*.hidden{
+  overflow: hidden;
+}*/
+
+.centrado{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #cef;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+/*fin preloader*/
+
+/* header*/
+header{
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(to bottom,
+    rgba(114, 109, 109, 0.788),
+    rgba(14, 10, 78, 0.6),
+    rgba(6, 14, 5, 0.781)
+    ),url(imagenes/comida-china-tipica.jpg);
+    background-attachment: fixed;
+    background-position-y: center;
+    background-size: cover;
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+}
+
+.nav1{
+    background: transparent;
+    height: 120px;
+    color: #fff;
+}
+
+.nav2{
+    background: var(--fondo);
+    height: 150px;
+    color:#000;
+}
+
+.contenedor-nav{
+    display:flex;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    height: inherit;
+    overflow: hidden;
+}
+
+
+nav .enlaces a{
+    display: inline-block;
+    padding: 5px 0;
+    margin-right: 17px;
+    font-size: 17px;
+    font-weight: 300;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    color: inherit;
+}
+
+nav .enlaces a:hover{
+    border-bottom: 1px solid #1498a4;
+    transition: 0.6s;
+}
+
+.logo, .logo img{height: 100px;}
+
+.icono{
+    display: none;
+    font-size: 24px;
+    padding: 23.5px 20px;
+}
+
+.textos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+}
+
+.textos2{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(12, 9, 9);
+  overflow: hidden;
+  text-align: center;
+}
+
+.textos>h1{
+    font-size: 80px;;
+}
+
+.textos>h2{font-size: 30px; font-weight: 300;}
+
+/* main */
+.contenedor{
+    margin:auto;
+    padding: var(--margenes) 0;
+    width: 90%;
+    text-align: center;
+    overflow: hidden;
+  }
+
+.contenedor h3{
+    font-size: var(--titulos);
+    color: var(--color1);
+    margin-bottom: var(--espacios); 
+  }
+
+.contenedor p{
+    font-size: var(--subtitulos);
+    font-weight: 300;
+    color: var(--color3);
+  }
+
+.after::after{
+    content: '';
+    display: block;
+    margin: auto;
+    margin-top: var(--espacios);
+    width: 100px;
+    height: 2px;
+    background: var(--color1) ;
+    margin-bottom: var(--espacios-contenido);
+  }
+
+.card{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+.content-card{
+    width: 30%;
+    box-shadow: 0 0 6px rgba(0,0,0,.5);
+    overflow: hidden;
+    height: 400px;
+    margin-bottom: var(--espacios-contenido); /*espacio entre bloque de arriba y de abajo*/
+  }
+
+  .content-card2{
+    width: 1000px;
+    box-shadow: 0 0 6px rgba(0,0,0,.5);
+    overflow: hidden;
+    height: 400px;
+    
+    margin-bottom: var(--espacios-contenido); /*espacio entre bloque de arriba y de abajo*/
+  }
+
+.secciones{
+    height: 75%;
+    width: 100%; 
+    padding: 10px;
+  }
+
+.content-card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 1s;
+  }
+
+.content-card img:hover{
+    transform: scale(1.2); 
+  }
+
+/*footer*/
+
+footer{
+  width: 100%;
+    height: 500px;
+    background: linear-gradient(to bottom,
+    rgba(185, 49, 49, 0.788),
+    rgba(114, 10, 233, 0.6),
+    rgba(19, 8, 114, 0.781)
+    ),url("static/imagenes/comida-china-tipica.jpg");
+    background-attachment: fixed;
+    background-position-y: center;
+    background-size: cover;
+}
+  
+  .marca-logo{
+    width: 40%;
+    margin:  auto;
+    margin-bottom: var(--espacios);
+  }
+  
+  .marca-logo img{
+    width: 100%;
+  }
+  
+  .iconos{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .fab{
+    font-size: 80px;
+    color: rgb(0, 0, 0);
+    margin-bottom: var(--espacios);
+    display: inline-block;
+  }
+  
+  footer p{
+    margin-top: var(--espacios);
+  }
+
+/*resposibidad*/
+
+@media screen and (max-width: 700px){
+    .nav2{
+      color: #fff;
+    }
+  
+    .icono{
+      display: block;
+      cursor: pointer;
+    }
+    .enlaces{
+      position: fixed;
+      top:80px;
+      background: #2c3e50;
+      left: 0;
+      height: 100%;
+      transition: 1s;
+      width:  0;        /*estos dos esconden el panel*/
+      overflow: hidden;
+    }
+  
+    .enlaces a{
+      display: block;
+      width: 100%;
+      height: 50px;
+      padding: 20px; 
+      text-align: center;
+      background: #34495e;
+      color: #fff;
+    }
+  
+    .textos>h1{
+      font-size: 70px;
+    }
+    .textos>h2{
+      font-size: 35px;
+    }
+    .content-card{
+      width: 48%;
+      margin-bottom: var(--margenes);
+    }
+  
+    .root{
+      --margenes: 30px;
+    }
+  
+    .conteiner{
+      width: 90%;
+      height: 400px;
+    }
+  }
+  
+  @media screen and (max-width: 500px){
+    :root{
+      --espacios-contenido:25px;
+    }
+    .content-card{
+      width: 90%;
+    }
+    .marca-logo{
+      width: 80%;
+    }
+    .iconos{
+      margin: auto;
+    }
+    
+    .conteiner{
+      width: 100%;
+      height: 300px;
+    }
+  }
