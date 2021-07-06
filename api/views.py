@@ -3,10 +3,11 @@ from django.shortcuts import render
 # Create your views here.
 
 from django.contrib.auth.models import User, Group
+from blogapp.models import Producto
 from rest_framework import viewsets
 from rest_framework import permissions
-from .serializers import UserSerializer, GroupSerializer
-
+from .serializers import UserSerializer, GroupSerializer, ProductoSerializer
+from rest_framework.response import Response
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -24,3 +25,20 @@ class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+class ProductoViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint para ver productos
+    """
+    
+    queryset = Producto.objects.all()
+    serializer_class = ProductoSerializer
+    
+
+    
+
+    
+    
+
+    
+    
