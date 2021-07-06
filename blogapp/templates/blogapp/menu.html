@@ -22,9 +22,12 @@
                         <a href="">{{ user.username }}</a>
                         {% else %}
                         <a href="">Iniciar sesión</a>
-                        <a href="">Registrarse</a>
+                        <a href="">Registrarse</a>                        
                         {% endif %}
+                        <a href="{% url 'api-root' %}">API</a>
                     </div>
+
+                    
                     <div class="icono" id="open"> 
                        <span>&#9776;</span>
                     </div> 
