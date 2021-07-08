@@ -1,5 +1,6 @@
 {% load static %}
 {{ STATIC_URL }}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +23,7 @@
         <div class="container">
             <div class="row align-items-stretch justify-content-between">
                 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                    <a class="navbar-brand" href="{% url 'menu' %}">MusicPro</a>
+                    <a class="navbar-brand" href="{% url 'index' %}">MusicPro</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -60,8 +61,8 @@
 
     <main>
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
-            <h1 class="display-4 mt-4">Lista de Productos</h1>
-            <p class="lead">Selecciona un producto</p>
+            <h1 class="display-4 mt-4">Categorias de Productos</h1>
+            <p class="lead">Selecciona Categoría</p>
         </div>
 
         <div class="container" id="lista-productos">
@@ -70,105 +71,94 @@
                 
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header">
-                        <h4 class="my-0 font-weight-bold">Guitarra acústica</h4>
+                        <h4 class="my-0 font-weight-bold">Instrumentos de cuerda</h4>
                     </div>
                     <div class="card-body">
-                        <img src="{% static 'img/cuerdas/acustica.jpg' %}" class="card-img-top" height="300px"
-                        width="100px">
-                        <h1 class="card-title pricing-card-title precio">$ <span class="">120</span></h1>
+                        <a href="{% url 'cuerdas' %}"><img src="{% static 'img/cuerdas/cuerdas.jpg' %}" class="card-img-top" height="200px"
+                            width="100px"></a>
+                        
 
                         <ul class="list-unstyled mt-3 mb-4">
-                            
+                            <li></li>
+                            <li>Guitarras</li>
+                            <li>Pianos</li>
+                            <li>Bajos</li>
                         </ul>
-                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1">Comprar</a>
+                        <a href="cuerdas.html" class="btn btn-block btn-primary">Ver Instrumentos</a>
                     </div>
                 </div>
 
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header">
-                        <h4 class="my-0 font-weight-bold">Bajo de cuatro cuerdas </h4>
+                        <h4 class="my-0 font-weight-bold">Instrumentos de percusión </h4>
                     </div>
                     <div class="card-body">
-                        <img src="{% static 'img/cuerdas/cuatro cuerdas.jpg' %}" class="card-img-top" height="300px"
+                        <img src="{% static 'img/percusion/percusion.jpg' %}" class="card-img-top" height="200px"
                         width="100px">
-                        <h1 class="card-title pricing-card-title precio">$ <span class="">200</span></h1>
+                        
 
                         <ul class="list-unstyled mt-3 mb-4">
-                            
+                            <li></li>
+                            <li>Baterias</li>
+                            <li>Baterias eléctricas</li>
+                            <li>Maracas</li>
                         </ul>
-                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="2">Comprar</a>
+                        <a href="" class="btn btn-block btn-primary">Ver Instrumentos</a>
                     </div>
                 </div>
 
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header">
-                        <h4 class="my-0 font-weight-bold">Guitarra Eléctrica</h4>
+                        <h4 class="my-0 font-weight-bold">Amplificadores/ Stereos</h4>
                     </div>
                     <div class="card-body">
-                        <img src="{% static 'img/cuerdas/electrica.jpg' %}" class="card-img-top" height="300px"
+                        <img src="{% static 'img/amplificadores/amplificador.jpg' %}" class="card-img-top" height="200px"
                         width="100px">
-                        <h1 class="card-title pricing-card-title precio">$ <span class="">300</span></h1>
+                        
 
                         <ul class="list-unstyled mt-3 mb-4">
-                            
+                            <li></li>
+                            <li>Fender</li>
+                            <li>Mercury</li>
+                            <li>Marshall</li>
                         </ul>
-                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="3">Comprar</a>
+                        <a href="" class="btn btn-block btn-primary">Ver Instrumentos</a>
+                    </div>
+                </div>
+
+				<div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Accesorios/ Repuestos</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="{% static 'img/accesorios/accesorio2.png' %}" class="card-img-top" height="200px"
+                        width="100px">
+                        
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>Audifonos</li>
+                            <li>Micrófonos</li>
+                            <li>Cables</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary">Ver Instrumentos</a>
                     </div>
                 </div>
 
             </div>
+            
 
-            <div class="card-deck mb-3 text-center">
-                
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <h4 class="my-0 font-weight-bold">Pianola</h4>
-                    </div>
-                    <div class="card-body">
-                        <img src="{% static 'img/cuerdas/pianola.jpg' %}" class="card-img-top" height="300px"
-                        width="100px">
-                        <h1 class="card-title pricing-card-title precio">$ <span class="">800</span></h1>
-
-                        <ul class="list-unstyled mt-3 mb-4">
-                            
-                        </ul>
-                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="4">Comprar</a>
-                    </div>
-                </div>
-
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <h4 class="my-0 font-weight-bold">Piano de media cola</h4>
-                    </div>
-                    <div class="card-body">
-                        <img src="{% static 'img/cuerdas/media_cola.jpg' %}" class="card-img-top" height="300px"
-                        width="100px">
-                        <h1 class="card-title pricing-card-title precio">$ <span class="">1150</span></h1>
-
-                        <ul class="list-unstyled mt-3 mb-4">
-                            
-                        </ul>
-                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="5">Comprar</a>
-                    </div>
-                </div>
-
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <h4 class="my-0 font-weight-bold">Piano de cola entera</h4>
-                    </div>
-                    <div class="card-body">
-                        <img src="{% static 'img/cuerdas/cola_entera.jpg' %}" class="card-img-top" height="300px"
-                        width="100px">
-                        <h1 class="card-title pricing-card-title precio">$ <span class="">1400</span></h1>
-
-                        <ul class="list-unstyled mt-3 mb-4">
-                            
-                        </ul>
-                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="6">Comprar</a>
-                    </div>
-                </div>
-
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+                <h1 class="display-4 mt-4">Nuestro Local</h1>
+                <p class="lead">Ver sucursales</p>
             </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26819.99115439124!2d-70.61452947421267!3d-32.
+	        83203998113361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967d567958d10b2b%3A0xcb307845d6011c6e!2sLos%2
+	        %2C%20Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1621625413437!5m2!1ses-419!2scl" width="1110px" height="450px" 
+	        style="border:0;" allowfullscreen="" loading="lazy" ></iframe>
+
+
+
 
 
         </div>
